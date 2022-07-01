@@ -1,0 +1,16 @@
+CREATE employee student(
+    id int PRIMARY KEY,
+    name varchar(21),
+    DOB date,
+    FatherName varchar(32),
+    Password	varchar(32),
+    Salary	int
+    );
+
+    CREATE TABLE marks (
+    id int,
+    phone varchar(32),
+    city varchar(32),
+    project varchar(32),
+    FOREIGN KEY (id) REFERENCES employee(id)
+    );
