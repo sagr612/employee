@@ -13,6 +13,7 @@
 
 </head>
 <body>
+    <header>
     <nav>
         <ul>
             <li><a href="index.php">Employee Login</a>  </li>
@@ -20,3 +21,4 @@
 
         </ul>
     </nav>
+    </header>
