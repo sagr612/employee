@@ -25,7 +25,7 @@
                 echo '</script>';
                 
             } else{
-                $q1="DELETE FROM data where id='$id' ";
+                $q1="DELETE FROM marks where id='$id' ";
                 $r1=mysqli_query($conn,$q1);
                 
                 $q2="DELETE FROM employee where id='$id' ";
