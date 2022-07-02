@@ -11,7 +11,7 @@ body {
 
 header {
     height: 60px;
-    background-color: #f2f2f2;
+    background-color: #4d4949;
     box-shadow: 0 0 10px #000;
 }
 
@@ -28,7 +28,7 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: #000000;
+    color: #f7e8e8;
     font-size: 18px;
     padding: 0px 0px 0px 20px;
 }
@@ -78,6 +78,9 @@ button {
     height: 60px;
     background-color: #000000;
     color: #ffffff;
+}
+table{
+    width: 100%;
 }
 th,td {
     text-align: left;

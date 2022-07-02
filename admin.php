@@ -4,8 +4,12 @@
     if(isset($_POST['submit'])){
         $username=$_POST['username'];
         $password=$_POST['password'];
-        
-        if($username=='admin' && $password=='123'){
+        if(empty($username)|| empty($password)){
+            echo '<script language="javascript">';
+            echo 'alert("Empty input fields")';
+            echo '</script>';
+        }
+        elseif($username=='admin' && $password=='123'){
             header("Location: add_User.php"); 
             session_start();
             $_SESSION['a_login'] = true;
@@ -13,7 +17,7 @@
         }
         else{
             echo '<script language="javascript">';
-            echo 'alert("Invalid credentails!!!")';
+            echo 'alert("Incorrect username or password.")';
             echo '</script>';
         }
         

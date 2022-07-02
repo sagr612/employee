@@ -9,10 +9,11 @@
     if(isset($_POST['submit'])){
         require 'database.php';
         $id=$_POST['id'];
-    
-        if( empty($id) ){
+        $salary=$_POST['salary'];
+        $dep=$_POST['dep'];
+        if( empty($id) || empty($salary) || empty($dep) ){
             echo '<script language="javascript">';
-            echo 'alert("empty input fields")';
+            echo 'alert(" empty input fields")';
             echo '</script>';
         } 
         else { 
@@ -25,18 +26,12 @@
                 echo '</script>';
                 
             } else{ 
-                $q1="DELETE FROM store where id='$id' ";
-                $r1=mysqli_query($conn,$q1);
                 
-                
-                $q3="DELETE FROM project where id='$id' ";
-                $r3=mysqli_query($conn,$q3);
-                
-                $q2="DELETE FROM employee where id='$id' ";
+                $q2="UPDATE employee SET Salary='$salary', department='$dep' where id='$id' ";
                 $r2=mysqli_query($conn,$q2);
-
+                
                 echo '<script language="javascript">';
-                echo 'alert("User Deleted!!!")';
+                echo 'alert("Updated!!!")';
                 echo '</script>';
                 
             }
@@ -46,10 +41,12 @@
 
 
 <div>
-    <p>Remove an Employee Here</p>
+    <p>Update Employee Info</p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <input type="number" name="id" placeholder="employe id" >
-        <p></p>
+        <input type="text" name="dep" placeholder="Department" >
+        <input type="number" name="salary" placeholder="salary" >
+        
         <button type="submit"  name="submit" >Submit</button>
     </form>
 </div>

@@ -17,10 +17,17 @@
 <header>
     <nav>
         <ul>
+            <li><a href="user.php">Users</a>  </li>
+
             <li><a href="add_User.php">Add User</a>  </li>
             <li><a href="rem_User.php">Delete User</a>  </li>
+            <li><a href="update_user.php">Update</a>  </li>
+            <li><a href="search.php">Search</a>  </li>
+            <li><a href="add_project.php">Add Project</a>  </li>
+            <li><a href="search_project.php">Search Project</a>  </li>
            
             <li><a href="admin_logout.php">Logout</a>  </li>
         </ul>
     </nav>
 </header>
+

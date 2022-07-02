@@ -19,8 +19,9 @@
         <ul>
             <li><a href="emp_det.php">Profile</a>  </li>
             <li><a href="emp_add.php">Add Information</a>  </li>
+            <li><a href="emp_project.php">Project History</a>  </li>
            
             <li><a href="emp_logout.php">Logout</a>  </li>
         </ul>
     </nav>
-        </header>
+</header>

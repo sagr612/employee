@@ -13,32 +13,31 @@
     $rowcount=mysqli_num_rows($result);
     $row=mysqli_fetch_assoc($result);
     
-    $name=$row['name'];
+    $name=$row['name']; 
     $dob=$row['DOB'];
     $fname=$row['FatherName'];
     $salary=$row['Salary'];
 
     echo "<table>";
-    echo "<tr><th> Employee Name :- </th><td>".$name."</td></tr> ";
+    echo "<tr><th> Employee Name  </th><td>".$name."</td></tr> ";
 
-    echo "<tr><th> Employee id :-  </th><td>".$id."</td></tr>";
+    echo "<tr><th> Employee id   </th><td>".$id."</td></tr>";
 
-    echo "<tr><th> Date of birth :- </th><td>".$dob."</td></tr>";
+    echo "<tr><th> Date of birth  </th><td>".$dob."</td></tr>";
 
-    echo "<tr><th> Father's Name :- </th><td>".$fname."</td></tr>";
+    echo "<tr><th> Father's Name  </th><td>".$fname."</td></tr>";
 
-    echo "<tr><th> Salary :- </th><td>".$salary."</td></tr>";
+    echo "<tr><th> Salary  </th><td>".$salary."</td></tr>";
 
 
 
-    $q1="SELECT * FROM marks where id='$id' ";
+    $q1="SELECT * FROM store where id='$id' ";
     $r1=mysqli_query($conn,$q1);
-    $num=mysqli_num_rows($r1);
+    $row1=mysqli_fetch_assoc($r1);
+    echo "<tr><th> City  </th><td>".$row1['city']."</td></tr>";
+    echo "<tr><th> Email  </th><td>".$row1['email']."</td></tr>";
+    echo "<tr><th> Phone Number  </th><td>".$row1['phone']."</td></tr>";
 
-    while($row1=mysqli_fetch_assoc($r1)){
-        echo "<tr><td colspan=2>In ".$row1['city'].", mobile number was ".$row1['phone']." while working on ".$row1['project']."</td></tr>";
-        
-    }
     echo "</table>";
 ?>
 

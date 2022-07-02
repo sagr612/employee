@@ -8,48 +8,48 @@
     }
     if(isset($_POST['submit'])){
         require 'database.php';
-        $id=$_POST['id'];
-    
-        if( empty($id) ){
+        $id=$_POST['id'];   
+        $project=$_POST['project'];
+        $sup=$_POST['sup'];
+
+        if(empty($id) || empty($project) || empty($sup) ){
             echo '<script language="javascript">';
-            echo 'alert("empty input fields")';
-            echo '</script>';
+            echo 'alert("Empty input fields.")';
+            echo '</script>'; 
         } 
-        else { 
+        else {
+
             $sql="SELECT id FROM employee WHERE id ='$id' ";
-            $result=mysqli_query($conn,$sql);
+            $result=mysqli_query($conn,$sql); 
             $rowcount=mysqli_num_rows($result);
             if($rowcount==0){
                 echo '<script language="javascript">';
-                echo 'alert("User Not Found!!!")';
+                echo 'alert("User not present")';
                 echo '</script>';
-                
-            } else{ 
-                $q1="DELETE FROM store where id='$id' ";
-                $r1=mysqli_query($conn,$q1);
-                
-                
-                $q3="DELETE FROM project where id='$id' ";
-                $r3=mysqli_query($conn,$q3);
-                
-                $q2="DELETE FROM employee where id='$id' ";
-                $r2=mysqli_query($conn,$q2);
-
+            } else{
+                $s="INSERT INTO project VALUES('$id','$project','$sup')";
+                $r=mysqli_query($conn,$s);
                 echo '<script language="javascript">';
-                echo 'alert("User Deleted!!!")';
+                echo 'alert("Project Added")';
                 echo '</script>';
-                
             }
+            
+            
         }
     }
 ?>
 
 
 <div>
-    <p>Remove an Employee Here</p>
+    <p>Assign projects Here</p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        <input type="number" name="id" placeholder="employe id" >
-        <p></p>
+        
+        <input type="number" name="id" placeholder="employee id"  >
+
+        <input type="text" name="project" placeholder="Project Name" >
+
+        <input type="text" name="sup" placeholder="Supervisor" >
+
         <button type="submit"  name="submit" >Submit</button>
     </form>
 </div>
