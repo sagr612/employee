@@ -20,7 +20,7 @@
             if(strlen($MyStr)!=10){
                 $flag=1;
             }
-        }
+        } 
         if(empty($phone) || empty($city) || empty($email)  ){
             echo '<script language="javascript">';
             echo 'alert("Empty input fields!!!")';

@@ -14,7 +14,7 @@
 
 </head>
 <body>
-<header>
+
     <nav>
         <ul>
             <li><a href="user.php">Users</a>  </li>
@@ -29,5 +29,3 @@
             <li><a href="admin_logout.php">Logout</a>  </li>
         </ul>
     </nav>
-</header>
-

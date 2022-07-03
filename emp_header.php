@@ -14,7 +14,6 @@
 
 </head> 
 <body>
-    <header>
     <nav>
         <ul>
             <li><a href="emp_det.php">Profile</a>  </li>
@@ -24,4 +23,3 @@
             <li><a href="emp_logout.php">Logout</a>  </li>
         </ul>
     </nav>
-</header>

@@ -33,11 +33,15 @@
 
     $q1="SELECT * FROM store where id='$id' ";
     $r1=mysqli_query($conn,$q1);
-    $row1=mysqli_fetch_assoc($r1);
-    echo "<tr><th> City  </th><td>".$row1['city']."</td></tr>";
-    echo "<tr><th> Email  </th><td>".$row1['email']."</td></tr>";
-    echo "<tr><th> Phone Number  </th><td>".$row1['phone']."</td></tr>";
-
+    $rowcount_1=mysqli_num_rows($r1);
+    if($rowcount_1>0){
+        $row1=mysqli_fetch_assoc($r1);
+        echo "<tr><th> City  </th><td>".$row1['city']."</td></tr>";
+        echo "<tr><th> Email  </th><td>".$row1['email']."</td></tr>";
+        echo "<tr><th> Phone Number  </th><td>".$row1['phone']."</td></tr>";
+    
+    }
+    
     echo "</table>";
 ?>
 

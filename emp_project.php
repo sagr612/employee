@@ -11,21 +11,24 @@
     $sql="SELECT * FROM project WHERE id ='$id' ";
     $result=mysqli_query($conn,$sql);
     $rowcount=mysqli_num_rows($result);
-    echo "<table>";
-    echo "<tr><th> Employee id </th>";
-    echo "<th> Project Name </th>";
-    echo " <th> Project Supervisor </th>";
-    echo "</tr> ";
-
-    while($row1=mysqli_fetch_assoc($result)){
-        echo "<tr> ";
-        echo "<td>".$row1['id']."</td>";
-        echo "<td>".$row1['pname']."</td>";
-        echo "<td>".$row1['dep']."</td>";
-        echo "</tr>";
-        
+    if($rowcount>0){
+        echo "<table>";
+        echo "<tr><th> Employee id </th>";
+        echo "<th> Project Name </th>";
+        echo " <th> Project Supervisor </th>";
+        echo "</tr> ";
+    
+        while($row1=mysqli_fetch_assoc($result)){
+            echo "<tr> ";
+            echo "<td>".$row1['id']."</td>";
+            echo "<td>".$row1['pname']."</td>";
+            echo "<td>".$row1['dep']."</td>";
+            echo "</tr>";
+            
+        }
+        echo "</table>";
     }
-    echo "</table>";
+    
         
     
 ?>

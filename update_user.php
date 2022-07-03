@@ -6,7 +6,7 @@
         header("Location:admin.php");
         exit();
     }
-    if(isset($_POST['submit'])){
+    if(isset($_POST['submit'])){ 
         require 'database.php';
         $id=$_POST['id'];
         $salary=$_POST['salary'];
