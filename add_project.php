@@ -40,19 +40,32 @@
 ?>
 
 
-<div>
-    <p>Assign projects Here</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        
-        <input type="number" name="id" placeholder="employee id"  >
+<div class="container col-lg-6" >
+  <h2>Assign Projects To Employee</h2>
+<form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method="post" >
 
-        <input type="text" name="project" placeholder="Project Name" >
+  <div class="mb-3">
+    <input type="number" class="form-control" name="id" placeholder="Enter Employee Id">
+  </div>
 
-        <input type="text" name="sup" placeholder="Supervisor" >
+  <div class="mb-3">
+    <input type="text" class="form-control"  name="project"  placeholder="Enter Project Name">
+  </div>
 
-        <button type="submit"  name="submit" >Submit</button>
-    </form>
+  <div class="mb-3">
+    <input type="text" class="form-control" name="sup" placeholder="Enter Suprevisor Name">
+  </div>
+
+  <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
+
+</form>
 </div>
+
+
+
+
+
+
 
 
 

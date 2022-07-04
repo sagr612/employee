@@ -48,29 +48,48 @@
     }
 ?>
 
+<div class="container col-lg-6" >
+  <h2>Add User Here</h2>
+<form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method="post" >
 
-<div>
-    <p>Add an Employee Here</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        
-        <input type="number" name="id" placeholder="employee id"  >
+  <div class="mb-3">
+    <input type="number" class="form-control" name="id" placeholder="Enter Employee Id">
+  </div>
 
-        <input type="text" name="username" placeholder="Name" >
+  <div class="mb-3">
+    <input type="text" class="form-control" name="username"  placeholder="Enter Employee Name">
+  </div>
 
-        <input type="date" name="dob" min='1899-01-01' max='2000-01-01' placeholder="Date of Birth" >
+  <div class="mb-3">
+    <input type="date" name="dob" min='1899-01-01' max='2000-01-01' class="form-control"  placeholder=" Enter date of birth">
+  </div>
 
-        <input type="text" name="fname" placeholder="Father's Name" >
 
-        <input type="text" name="password" placeholder="Password" >
-        
-        <input type="text" name="dep" placeholder="Department" >
+  <div class="mb-3">
+    <input type="text" class="form-control" name="fname" placeholder="Enter Father's Name">
+  </div>
 
-        
-        <input type="number" name="salary" placeholder="salary" >
+  <div class="mb-3">
+    <input type="text" class="form-control" name="password" placeholder="Enter Password">
+  </div>
 
-        <button type="submit"  name="submit" >Submit</button>
-    </form>
+
+  <div class="mb-3">
+    <input type="text" class="form-control" name="dep" placeholder="Enter Department Name">
+  </div>
+
+  <div class="mb-3">
+    <input type="number" class="form-control"  name="salary"  placeholder="Enter Salary">
+  </div>
+
+  <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
+
+</form>
 </div>
+
+
+
+
 
 
 

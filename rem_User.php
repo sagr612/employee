@@ -43,16 +43,19 @@
         }
     }
 ?>
+<div class="container col-lg-6" >
+  <h2>Delete Employee</h2>
+<form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method="post" >
 
-
-<div>
-    <p>Remove an Employee Here</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        <input type="number" name="id" placeholder="employe id" >
-        <p></p>
-        <button type="submit"  name="submit" >Submit</button>
-    </form>
+  <div class="mb-3">
+    <input type="number" class="form-control" name="id" placeholder="Enter Employee Id">
+  </div>
+  <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
+</form>
 </div>
+
+
+
 
 
 

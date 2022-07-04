@@ -25,21 +25,26 @@
 
 ?> 
 
-<div>
-    <p> Admin Login </p>
-
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        
-        <input type="text" name="username" placeholder="Username" >
-       
-        <input type="password" name="password" placeholder="Password" >
-        
-        <button type="submit"  name="submit" >Submit</button>
-    </form>
+<div class="container col-lg-6" >
+  <h2>Admin Login</h2>
+<form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method="post" >
+  <div class="mb-3">
+    <input type="text" class="form-control" name="username"  placeholder="Enter Username">
+  </div>
+  <div class="mb-3">
+    <input type="password" class="form-control" name="password" placeholder="Enter Password">
+  </div>
+  <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
+</form>
 </div>
+
+
+
+
+ 
 
 
 <?php
     require_once 'footer.php';
 ?>
- 
+  

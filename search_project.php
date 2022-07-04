@@ -7,15 +7,22 @@
         exit();
     }
 ?>
+ 
+ <div class="container col-lg-6" >
+  <h2>View Projects Of An Employee</h2>
+<form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method="post" >
 
+  <div class="mb-3">
+    <input type="number" class="form-control" name="id" placeholder="Enter Employee Id">
+  </div>
 
-<div>
-    <p>search project for employee</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        <input type="number" name="id" placeholder="Employee id" >
-        <button type="submit"  name="submit" >Submit</button>
-    </form>
+  <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
+
+</form>
 </div>
+
+
+
 
 
 <?php

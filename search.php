@@ -9,13 +9,26 @@
 ?>
 
 
-<div>
-    <p>search according to department</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        <input type="text" name="dep" placeholder="Department Name" >
-        <button type="submit"  name="submit" >Submit</button>
-    </form>
+<div class="container col-lg-6" >
+  <h2>Search Department Wise</h2>
+<form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method="post" >
+
+  <div class="mb-3">
+    <input type="text" class="form-control" name="dep" placeholder="Enter Department Name">
+  </div>
+
+  <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
+
+</form>
 </div>
+
+
+
+
+
+ 
+
+
 
 
 <?php

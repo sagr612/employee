@@ -45,22 +45,27 @@
     }
 ?>
 
+<div class="container col-lg-6" >
+  <h2>Add Employee Details</h2>
+<form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method="post" >
 
-<div>
-    <p>Add some Employee details </p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        
-        <input type="number" name="phone" placeholder="Mobile Number" >
-        
-        <input type="text" name="city" placeholder="City" >
-        
+  <div class="mb-3">
+    <input type="number" class="form-control" name="phone" placeholder="Enter Mobile Number">
+  </div>
 
-        <input type="email" name="email" placeholder="Email" >
+  <div class="mb-3">
+    <input type="text" class="form-control" name="city" placeholder="Enter City">
+  </div>
 
+  <div class="mb-3">
+    <input type="email" class="form-control"  name="email"  placeholder="Enter Email Address">
+  </div>
 
-        <button type="submit"  name="submit" >Submit</button>
-    </form>
+  <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
+
+</form>
 </div>
+
 
 
 

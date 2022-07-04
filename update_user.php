@@ -36,20 +36,35 @@
                 
             }
         }
-    }
+    } 
 ?>
 
 
-<div>
-    <p>Update Employee Info</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        <input type="number" name="id" placeholder="employe id" >
-        <input type="text" name="dep" placeholder="Department" >
-        <input type="number" name="salary" placeholder="salary" >
-        
-        <button type="submit"  name="submit" >Submit</button>
-    </form>
+<div class="container col-lg-6" >
+  <h2>Update User Information</h2>
+<form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method="post" >
+
+  <div class="mb-3">
+    <input type="number" class="form-control" name="id" placeholder="Enter Employee Id">
+  </div>
+
+  <div class="mb-3">
+    <input type="text" class="form-control" name="dep" placeholder="Enter Department Name">
+  </div>
+
+  <div class="mb-3">
+    <input type="number" class="form-control"  name="salary"  placeholder="Enter Salary">
+  </div>
+
+  <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
+
+</form>
 </div>
+
+
+
+
+
 
 
 

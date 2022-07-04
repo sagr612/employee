@@ -34,18 +34,26 @@
     }
 ?>
 
-<div>
-    <p>employee login</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        <input type="number" name="id" placeholder="Employee Id" >
-        <p></p>
-        <input type="password" name="password" placeholder="Password" >
-        <p></p>
-        <button type="submit"  name="submit" >Submit</button>
-    </form>
+<div class="container col-lg-6" >
+  <h2 >Employee Login</h2>
+<form action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]);?>" method="post" >
+  <div class="mb-3">
+    <input type="number" class="form-control" name="id"  placeholder="Enter Employee Id">
+  </div>
+  <div class="mb-3">
+    <input type="password" class="form-control" name="password" placeholder="Enter Password">
+  </div>
+  <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
+</form>
 </div>
 
+
+
+
+
+
+
+
 <?php
-    require_once 'footer.php';
+  require_once 'footer.php';
 ?>
- 
